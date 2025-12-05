@@ -1,12 +1,10 @@
-/* Variables de Estilo */
 :root {
-    --color-principal: #a87f3b; /* Dorado/Bronce elegante */
+    --color-principal: #a87f3b; 
     --color-secundario: #fdfae8;
-    --color-fondo: #121212; /* Fondo muy oscuro */
+    --color-fondo: #121212; 
     --font-heading: 'Times New Roman', serif;
 }
 
-/* Base */
 body {
     font-family: Arial, sans-serif;
     background-color: var(--color-fondo);
@@ -20,19 +18,19 @@ a {
     color: inherit;
 }
 
-/* ------------------ Header y Navegación ------------------ */
+/* ------------------ MENÚ SUPERIOR ------------------ */
 
-.top-menu {
+.menu-superior {
     text-align: center;
     padding: 20px 0;
     position: fixed;
     width: 100%;
     z-index: 100;
-    background: rgba(18, 18, 18, 0.9); /* Fondo semi-transparente y oscuro */
+    background: rgba(18, 18, 18, 0.9);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-.top-menu a {
+.menu-superior a {
     color: var(--color-secundario);
     margin: 0 20px;
     font-weight: 500;
@@ -42,27 +40,26 @@ a {
     transition: color 0.3s, border-bottom 0.3s;
 }
 
-.top-menu a:hover {
+.menu-superior a:hover {
     color: var(--color-principal);
     border-bottom: 2px solid var(--color-principal);
 }
 
-/* ------------------ Contenedor de la Página ------------------ */
+/* ------------------ ENCABEZADO ------------------ */
 
-.page-container {
-    padding-top: 80px; /* Espacio para el header fijo */
+.contenedor-pagina {
+    padding-top: 80px;
     position: relative;
-    /* Fondo elegante que simula un mapa o pergamino antiguo */
     background-image: url('https://via.placeholder.com/1920x1080?text=Mapa+Antiguo+Oscuro');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* Pequeño efecto de Parallax sutil */
+    background-attachment: fixed;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.hero-overlay {
+.encabezado-hero {
     text-align: center;
     padding: 100px 20px 50px;
     background: rgba(0, 0, 0, 0.4);
@@ -70,7 +67,7 @@ a {
     margin-bottom: 40px;
 }
 
-.hero-overlay h1 {
+.encabezado-hero h1 {
     font-family: var(--font-heading);
     font-size: 4em;
     color: var(--color-principal);
@@ -78,27 +75,25 @@ a {
     letter-spacing: 5px;
 }
 
-.hero-overlay p {
+.encabezado-hero p {
     font-size: 1.2em;
     font-style: italic;
     opacity: 0.8;
 }
 
-/* ------------------ Grid de Maravillas (El Layout Diferente) ------------------ */
+/* ------------------ TARJETAS ------------------ */
 
-.maravillas-grid-container {
+.contenedor-maravillas {
     display: flex;
-    flex-wrap: wrap; /* Permite que las tarjetas fluyan */
+    flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
     max-width: 1400px;
     padding-bottom: 80px;
 }
 
-/* ------------------ Estilos de la Tarjeta (EL EFECTO DE ZOOM) ------------------ */
-
-.card {
-    width: 300px; 
+.tarjeta {
+    width: 300px;
     height: 400px;
     border-radius: 15px;
     overflow: hidden;
@@ -107,49 +102,47 @@ a {
     background-size: cover;
     background-position: center;
     cursor: pointer;
-    border: 3px solid transparent; /* Para el borde al hacer hover */
-    
-    /* Clave: Transición suave */
+    border: 3px solid transparent;
     transition: transform 0.45s ease-out, box-shadow 0.45s ease-out, border 0.45s;
     will-change: transform;
 }
 
-/* EFECTO HOVER: Ampliar y destacar */
-.card:hover {
-    transform: scale(1.08); /* Zoom sutil pero efectivo */
-    z-index: 5; /* Se eleva sobre el resto */
+.tarjeta:hover {
+    transform: scale(1.08);
+    z-index: 5;
     box-shadow: 0 30px 60px rgba(0, 0, 0, 0.9), 0 0 20px rgba(168, 127, 59, 0.7);
-    border: 3px solid var(--color-principal); /* Borde dorado al hacer hover */
+    border: 3px solid var(--color-principal);
 }
 
-/* Fondos de las Maravillas (Imágenes simuladas) */
-.card-chichen { background-image: url('https://via.placeholder.com/300x400?text=Chichen+Itza'); }
-.card-coliseo { background-image: url('https://via.placeholder.com/300x400?text=Coliseo+Romano'); }
-.card-cristo { background-image: url('https://via.placeholder.com/300x400?text=Cristo+Redentor'); }
-.card-muralla { background-image: url('https://via.placeholder.com/300x400?text=Gran+Muralla+China'); }
-.card-machu { background-image: url('https://via.placeholder.com/300x400?text=Machu+Picchu'); }
-.card-petra { background-image: url('https://via.placeholder.com/300x400?text=Petra+Jordania'); }
-.card-taj { background-image: url('https://via.placeholder.com/300x400?text=Taj+Mahal'); }
+/* IMÁGENES DE FONDO */
 
-/* Contenido de la Tarjeta */
-.card-content {
+.tarjeta-chichen { background-image: url('MEXICO.JPG'); }
+.tarjeta-coliseo { background-image: url('Roma.jpg'); }
+.tarjeta-cristo { background-image: url('brasil.jpg'); }
+.tarjeta-muralla { background-image: url('CHINA.jpg'); }
+.tarjeta-machu { background-image: url('PERU.jpg'); }
+.tarjeta-petra { background-image: url('PETRA.jpg'); }
+.tarjeta-taj { background-image: url('INDIA.JPG'); }
+
+/* CONTENIDO DE TARJETA */
+
+.contenido-tarjeta {
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
     padding: 20px;
-    /* Degradado oscuro elegante */
     background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
 }
 
-.card-content h3 {
+.contenido-tarjeta h3 {
     margin: 0;
     font-size: 1.6em;
     color: var(--color-principal);
     line-height: 1.2;
 }
 
-.card-content .location {
+.ubicacion {
     display: block;
     font-size: 0.9em;
     opacity: 0.7;
@@ -157,34 +150,17 @@ a {
     letter-spacing: 1px;
 }
 
+/* RESPONSIVE */
 
-/* Media Queries para Responsividad */
 @media (max-width: 1024px) {
-    .hero-overlay h1 {
-        font-size: 3em;
-    }
-    .maravillas-grid-container {
-        gap: 20px;
-    }
-    .card {
-        width: 250px;
-        height: 350px;
-    }
+    .encabezado-hero h1 { font-size: 3em; }
+    .contenedor-maravillas { gap: 20px; }
+    .tarjeta { width: 250px; height: 350px; }
 }
 
 @media (max-width: 768px) {
-    .top-menu a {
-        margin: 0 10px;
-        font-size: 0.8em;
-    }
-    .hero-overlay h1 {
-        font-size: 2.5em;
-    }
-    .card {
-        width: 90%; /* Ocupa casi todo el ancho en móvil */
-        height: 300px;
-    }
-    .maravillas-grid-container {
-        padding: 0 10px 40px;
-    }
+    .menu-superior a { margin: 0 10px; font-size: 0.8em; }
+    .encabezado-hero h1 { font-size: 2.5em; }
+    .tarjeta { width: 90%; height: 300px; }
+    .contenedor-maravillas { padding: 0 10px 40px; }
 }
