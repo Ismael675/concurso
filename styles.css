@@ -275,3 +275,153 @@ a {
         flex-direction: column;
     }
 }
+
+
+
+----------------------------------------------------
+
+
+/* ------------------ HERO RESERVAS ------------------ */
+.hero-reservas {
+    text-align: center;
+    padding: 120px 20px 60px;
+    background: linear-gradient(rgba(18,18,18,0.7), rgba(18,18,18,0.7)), url('https://via.placeholder.com/1920x600?text=Reserva+Tu+Aventura') center/cover no-repeat;
+    color: var(--color-secundario);
+}
+
+.hero-reservas h1 {
+    font-family: var(--font-heading);
+    font-size: 3.5em;
+    color: var(--color-principal);
+    margin-bottom: 15px;
+    text-shadow: 0 0 15px rgba(168,127,59,0.8);
+}
+
+.hero-reservas p {
+    font-size: 1.3em;
+    opacity: 0.85;
+}
+
+/* ------------------ CAJA DE RESERVAS ------------------ */
+.caja-reservas {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 40px 20px 80px;
+}
+
+/* ------------------ INFO DE RESERVAS ------------------ */
+.info-reservas,
+.formulario-reservas {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(6px);
+    padding: 30px;
+    border-radius: 15px;
+    flex: 1;
+    min-width: 320px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+    color: var(--color-secundario);
+}
+
+.info-reservas h3,
+.formulario-reservas h3 {
+    font-family: var(--font-heading);
+    font-size: 1.8em;
+    color: var(--color-principal);
+    margin-bottom: 20px;
+}
+
+.info-reservas ul {
+    list-style: disc;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    opacity: 0.8;
+}
+
+.info-reservas hr {
+    border: none;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    margin: 20px 0;
+}
+
+/* ------------------ FORMULARIO DE RESERVAS ------------------ */
+.formulario-reservas label {
+    display: block;
+    margin: 12px 0 5px;
+    font-size: 0.95em;
+    opacity: 0.8;
+}
+
+.formulario-reservas input,
+.formulario-reservas select,
+.formulario-reservas textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background: rgba(255,255,255,0.1);
+    color: var(--color-secundario);
+    font-size: 1em;
+}
+
+.formulario-reservas input::placeholder,
+.formulario-reservas textarea::placeholder {
+    color: rgba(255,255,255,0.5);
+}
+
+/* ------------------ SELECT ESTILIZADO ------------------ */
+.formulario-reservas select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    padding-right: 40px; /* espacio para flecha */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><polygon points="0,0 16,0 8,8" fill="white"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 12px;
+}
+
+.formulario-reservas select:invalid {
+    color: rgba(255,255,255,0.6);
+}
+
+.formulario-reservas select option {
+    color: #000000;
+    background-color: #ffffff;
+}
+
+/* ------------------ BOTÓN ------------------ */
+.formulario-reservas button {
+    width: 100%;
+    padding: 15px;
+    background: var(--color-principal);
+    color: #000;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.formulario-reservas button:hover {
+    background: #c49844;
+    transform: scale(1.03);
+}
+
+/* ------------------ RESPONSIVE ------------------ */
+@media (max-width: 900px) {
+    .caja-reservas {
+        flex-direction: column;
+    }
+    .hero-reservas h1 {
+        font-size: 2.5em;
+    }
+    .hero-reservas p {
+        font-size: 1.1em;
+    }
+}
